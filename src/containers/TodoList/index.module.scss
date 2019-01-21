@@ -1,0 +1,91 @@
+.todoList {
+  width: 380px;
+  margin: auto;
+  margin-top: 100px;
+  padding: 10px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, .2);
+  border-radius: 4px;
+}
+
+.header {
+  h1 {
+    margin-bottom: 10px;
+    padding-left: .5em;
+    border-bottom: 1px solid #e0e0e0;
+  }
+
+  .operateArea {
+    display: flex;
+    flex-flow: row nowrap;
+    margin-bottom: 10px;
+
+    :global(.ant-input) {
+      flex: 1 1 auto;
+      margin-right: 10px;
+    }
+
+    :global(.ant-btn) {
+      flex: 0 0 auto;
+    }
+  }
+}
+
+.doingList,
+.doneList {
+  min-height: 125px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  li {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    padding: 5px;
+    padding-left: 10px;
+    border-radius: 4px;
+
+    &:hover {
+      background: #cedbea36;
+    }
+
+    .itemOperate {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      align-items: center;
+      width: 40px;
+
+      i {
+        cursor: pointer;
+      }
+
+      .check,
+      .close,
+      .repeal {
+        transition: color .2s;
+      }
+      
+      .check:hover {
+        color: green;
+      }
+
+      .close:hover {
+        color: #f5222d;
+      }
+
+      .repeal:hover {
+        color: #1890ff;
+      }
+    }
+  }
+}
+
+.doingList {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.doneList {
+  padding-top: 10px;
+}

@@ -8,7 +8,7 @@ class App extends Component {
     return (
       <div className="App">
         <Router>
-          <Route component={TodoList} />
+          <Route render={route => <TodoList />} />
         </Router>
       </div>
     );
